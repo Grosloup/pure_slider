@@ -18,7 +18,7 @@
 </div>
 ```
 
-##javascript
+##Javascript
 
 ```
 var element = document.querySelector('#slider');
@@ -56,3 +56,9 @@ ps.init(element);
     onAfterInitCb: function () {}
 }
 ```
+
+###TODOS
+
+- change style="background-image..." by data-slide-url
+- add an initFromJson function : load a json file to build the slider
+- add an initFromAjax function : same idea than initFromJson
