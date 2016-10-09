@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="dist/css/pure_slide.min.css">
+
+</head>
+<body>
+
+
+
+<div class="container-fluid">
+
+    <div class="ps-slider" id="slider2">
+        <div class="ps-slides" id="slides2">
+            <div id="slide10" class="ps-slide" data-slide-laps="5" style="background-image: url('http://lorempicsum.com/simpsons/1000/800/1');">
+                <div class="inner">
+                    <h1>It's new !</h1>
+                    <a href="http://www.google.fr" class="btn btn-orange">try it !</a>
+                </div>
+            </div>
+            <div id="slide20" class="ps-slide" data-slide-laps="4" style="background-image: url('http://lorempicsum.com/simpsons/800/500/2');"></div>
+            <div id="slide30" class="ps-slide" style="background-image: url('http://lorempicsum.com/simpsons/800/500/3');"></div>
+            <div id="slide40" class="ps-slide" style="background-image: url('http://lorempicsum.com/simpsons/800/500/4');"></div>
+            <div id="slide50" class="ps-slide" style="background-image: url('http://lorempicsum.com/simpsons/800/500/5');"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="dist/js/base.min.js"></script>
+<script src="dist/js/PureSlider.min.js"></script>
+<script>
+    var ps = new PureSlider(
+            {
+                autoplay: true,
+                showNav: true, showBtn:true,
+                direction: 'forward',
+                laps: 2000,
+                onBeforeStartCb: function (ps) {
+                    //console.log('start');
+                },
+                onBeforeSlideChangeCb: function (ps) {
+                    //console.log('before slide change');
+                },
+                onAfterSlideChangeCb: function (ps) {
+                    //console.log('after slide change');
+                    //console.log(ps.vars.currentSlide);
+                },
+                onBeforeStopCb: function (ps) {
+                    //console.log(ps.vars.interval);
+                },
+                onAfterStopCb: function (ps) {
+                    //console.log(ps.vars.interval);
+                }
+            }
+            );
+    ps.init(document.querySelector('#slider2'));
+</script>
+</body>
+</html>
